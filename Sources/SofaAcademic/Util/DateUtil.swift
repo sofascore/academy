@@ -33,16 +33,18 @@ enum DateUtil {
 
     static func atNextAvailableHour(hour: Int) -> Date {
         let calendar = Calendar.current
-        var now = Date()
+        let now = Date()
         let nowHour = calendar.component(.hour, from: now)
-        if nowHour > hour {
-            now = now.addingTimeInterval(Double(24 - (nowHour - hour)) * 60 * 60)
+        let newHour = if nowHour > hour {
+            calendar.component(.hour, from: now.addingTimeInterval(Double(24 - (nowHour - hour)) * 60 * 60))
+        } else {
+            hour
         }
         let components = DateComponents(
             year: calendar.component(.year, from: now),
             month: calendar.component(.month, from: now),
             day: calendar.component(.day, from: now),
-            hour: calendar.component(.hour, from: now),
+            hour: newHour,
             minute: 0,
             second: 0
         )
