@@ -2,6 +2,8 @@ import Foundation
 
 public final class Homework2DataSource {
 
+    public init() {}
+
     public func events() -> [Event] {
         (laLigaEvents() + premierLeagueEvents())
             .sorted(by: { $0.startTimestamp < $1.startTimestamp })
