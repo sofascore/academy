@@ -9,7 +9,6 @@ open class BaseView: UIView, BaseViewProtocol {
 
         addViews()
         styleViews()
-        setupConstraints()
         setupGestureRecognizers()
         setupBinding()
     }
@@ -48,5 +47,15 @@ open class BaseView: UIView, BaseViewProtocol {
     /// Override this method to set up any data bindings needed for your view.
     open func setupBinding() {
         // Default implementation is empty
+    }
+
+    open override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+
+        guard superview != nil else {
+            return
+        }
+
+        setupConstraints()
     }
 }
