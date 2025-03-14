@@ -50,11 +50,18 @@ public final class Homework2DataSource {
     }
 
     private static let spain = Country(id: 1, name: "Spain")
+    private static let england = Country(id: 2, name: "England")
     private static let laLigaLeague = League(
         id: 1,
         name: "La Liga",
         country: spain,
         logoUrl: "https://img.sofascore.com/api/v1/unique-tournament/8/image"
+    )
+    private static let premierLeague = League(
+        id: 2,
+        name: "Premier League",
+        country: england,
+        logoUrl: "https://img.sofascore.com/api/v1/unique-tournament/17/image"
     )
     private static let realMadrid = Team(
         id: 1,
@@ -75,5 +82,25 @@ public final class Homework2DataSource {
         id: 4,
         name: "Mallorca",
         logoUrl: "https://img.sofascore.com/api/v1/team/2826/image"
+    )
+    private static let arsenal = Team(
+        id: 5,
+        name: "Arsenal",
+        logoUrl: "https://img.sofascore.com/api/v1/team/42/image"
+    )
+    private static let manUtd = Team(
+        id: 6,
+        name: "Man Utd",
+        logoUrl: "https://img.sofascore.com/api/v1/team/35/image"
+    )
+    private static let chelsea = Team(
+        id: 7,
+        name: "Chelsea",
+        logoUrl: "https://img.sofascore.com/api/v1/team/38/image"
+    )
+    private static let liverpool = Team(
+        id: 8,
+        name: "Liverpool",
+        logoUrl: "https://img.sofascore.com/api/v1/team/44/image"
     )
 }
