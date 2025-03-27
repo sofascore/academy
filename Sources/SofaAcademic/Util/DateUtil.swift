@@ -30,6 +30,20 @@ enum DateUtil {
         return calendar.date(from: components)!
     }
 
+    static func inTwoDays(hour: Int? = nil, minute: Int? = nil) -> Date {
+        let calendar = Calendar.current
+        let now = Date().addingTimeInterval(2 * 24 * 60 * 60)
+        let components = DateComponents(
+            year: calendar.component(.year, from: now),
+            month: calendar.component(.month, from: now),
+            day: calendar.component(.day, from: now),
+            hour: hour ?? calendar.component(.hour, from: now),
+            minute: minute ?? calendar.component(.minute, from: now),
+            second: 0
+        )
+        return calendar.date(from: components)!
+    }
+
     static func todayAtNearestPastHalfPoint() -> Date {
         let calendar = Calendar.current
         let now = Date()

@@ -129,6 +129,48 @@ public final class Homework3DataSource {
                 league: Self.premierLeague,
                 status: .notStarted,
                 startTimestamp: Int(DateUtil.tommorow(hour: 20, minute: 00).timeIntervalSince1970)
+            ),
+            Event(
+                id: 16,
+                homeTeam: Self.manCity,
+                awayTeam: Self.newcastle,
+                league: Self.premierLeague,
+                status: .notStarted,
+                startTimestamp: Int(DateUtil.tommorow(hour: 20, minute: 00).timeIntervalSince1970)
+            ),
+            Event(
+                id: 17,
+                homeTeam: Self.manCity,
+                awayTeam: Self.chelsea,
+                league: Self.premierLeague,
+                status: .finished,
+                startTimestamp: Int(DateUtil.yesterday(hour: 9, minute: 00).timeIntervalSince1970),
+                homeScore: 1,
+                awayScore: 1
+            ),
+            Event(
+                id: 18,
+                homeTeam: Self.manUtd,
+                awayTeam: Self.newcastle,
+                league: Self.premierLeague,
+                status: .notStarted,
+                startTimestamp: Int(DateUtil.inTwoDays(hour: 11, minute: 00).timeIntervalSince1970)
+            ),
+            Event(
+                id: 19,
+                homeTeam: Self.liverpool,
+                awayTeam: Self.manCity,
+                league: Self.premierLeague,
+                status: .notStarted,
+                startTimestamp: Int(DateUtil.inTwoDays(hour: 13, minute: 00).timeIntervalSince1970)
+            ),
+            Event(
+                id: 20,
+                homeTeam: Self.newcastle,
+                awayTeam: Self.arsenal,
+                league: Self.premierLeague,
+                status: .notStarted,
+                startTimestamp: Int(DateUtil.inTwoDays(hour: 20, minute: 00).timeIntervalSince1970)
             )
         ]
     }
@@ -186,5 +228,15 @@ public final class Homework3DataSource {
         id: 8,
         name: "Liverpool",
         logoUrl: "https://img.sofascore.com/api/v1/team/44/image"
+    )
+    private static let manCity = Team(
+        id: 9,
+        name: "Man City",
+        logoUrl: "https://img.sofascore.com/api/v1/team/17/image"
+    )
+    private static let newcastle = Team(
+        id: 10,
+        name: "Newcastle",
+        logoUrl: "https://img.sofascore.com/api/v1/team/39/image"
     )
 }
